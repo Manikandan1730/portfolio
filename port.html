@@ -1,0 +1,102 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>portfolio</title>
+    <link rel="stylesheet" href="port.css">
+    
+</head>
+<body>
+    
+  <div class="header">
+    <div class="container">
+        <nav>
+            
+            <ul>
+                <li><a href="">Home</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Skills</a></li>
+                <li><a href="">Contact</a></li>
+
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Web developer</p>
+            <h1>Hi, I'm Mani<span>kandan</span></h1>
+        </div>
+    </div>
+  </div>
+  <div id="about">
+    <div class="container">
+        <div class="row">
+       
+        <div class="about-col-1">
+            <img src="mani.JPG">
+        </div>
+            <div class="about-col-2">
+                <h1>About Me</h1>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi, voluptas facilis quod mollitia tempora tempore soluta inventore ut corrupti illum error omnis harum eius et architecto totam hic similique velit.</p>
+           <br>
+                <div class="tab-titles">
+                <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+                <p class="tab-links"onclick="opentab('Experience')">Experience</p>
+                <p class="tab-links"  onclick="opentab('Education')">Education</p>
+            </div>
+            <div class="tab-contents active-tab" id="Skills">
+                <ul>
+                    <li>HTML/CSS/BOOTSTRAP/JAVASCRIPT<span><br>Web Designing</span></li>
+                    <li>PYTHON<span><br>Software Developer</span></li>
+                    <li>SQL<span><br>Database</span></li>
+                </ul>
+            </div>
+            <div class="tab-contents"id="Education">
+                <ul>
+                    <li>SSLC<span><br>lakshmipuram Higher Secondary School (65%)</span></li>
+                    <li>HSC<span><br>lakshmipuram Higher Secondary School(75%) </span></li>
+                    <li>BSC(COMPUTER SCIENCE)<span><br>Thiruthangal Nadar College</span></li>
+                </ul>
+            </div>
+        
+        </div>
+  <script>
+    var tablinks=document.getElementsByClassName("tab-links");
+    var tabcontents=document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link");
+
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+    }
+
+
+  </script>
+  <br><br>
+  <div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1>Contact Me</h1>
+                <p>mani7556414@gmail.com</p>
+                <p>8807556414</p>
+
+
+                <div class="social">
+                    <a href="http://facebook.com"><i class="fab fa-facebook"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-twitter-square"></i></a>
+                    <a href=""><i class="fab fa-linkedin"></i></a>
+
+                </div>
+            </div>
+        </div>
+    </div>
+  </div>
+</body>
+</html>
